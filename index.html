@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yantrlkaranatek Solutions</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header + Navbar -->
+  <header>
+    <div class="navbar">
+      <div class="brand">
+        <img src="logo.png" alt="Company Logo" class="logo">
+        <h1>Yantrlkaranatek Solutions</h1>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <h2>Welcome to Yantrlkaranatek Solutions</h2>
+    <p>We deliver cutting-edge technology solutions in AI, IoT, Cloud, and Automation that drive innovation and efficiency for your business.</p>
+    <a href="#contact" class="hero-btn">Contact Us</a>
+
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Yantrlkaranatek Solutions is a team of passionate engineers dedicated to solving real-world problems through technology. Our mission is to empower businesses with intelligent and automated solutions that enhance productivity and growth.</p>
+    <p>With expertise in AI, IoT, Cloud, and software development, we deliver customized solutions tailored to our clients' needs, committed to innovation, quality, and excellence.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li><i class="fas fa-robot"></i> AI-based Data Analytics</li>
+      <li><i class="fas fa-microchip"></i> IoT Product Development</li>
+      <li><i class="fas fa-mobile-alt"></i> Web & Mobile App Solutions</li>
+      <li><i class="fas fa-cloud"></i> Cloud Consulting & Deployment</li>
+      <li><i class="fas fa-cogs"></i> Automation & Smart Systems</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@yantrlkaranatek.com</p>
+    <p>Phone: 6305269877</p>
+    <p>Location: Hyderabad, India</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Yantrlkaranatek Solutions | All Rights Reserved</p>
+    <p>
+      <a href="https://www.linkedin.com/in/yantrlkaranateksolutions-pvt-ltd-2524a3380?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> | 
+      <a href="https://www.instagram.com/yantrlkaranatek_pvt.lmtd?utm_source=qr&igsh=MW4yNm56eWk3c2NvcQ==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    </p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- JS for Back to Top + Section Reveal -->
+  <script>
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      // Show Back to Top
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+
+      // Section Reveal
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add('visible');
+        }
+      });
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  </script>
+
+</body>
+</html>

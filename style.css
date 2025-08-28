@@ -1,0 +1,271 @@
+/* ==================== General Page Settings ==================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: black;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* ==================== Header + Navbar ==================== */
+header {
+  background: navy;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkblue;
+  padding: 15px 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 170px;
+  height: auto;
+}
+
+.brand h1 {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: lightgreen;
+}
+
+/* ==================== Hero Section ==================== */
+.hero {
+  background: linear-gradient(135deg, #0a192f, #064273, #0a3d66, #0a192f);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite, fadeIn 2s forwards;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  opacity: 0;
+}
+/* Hero Button Styling */
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: lightgreen;
+  color: darkblue;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #64ffda;
+  transform: scale(1.05);
+}
+
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hero h2:hover, .hero p:hover {
+  transform: scale(1.02);
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+/* ==================== Sections ==================== */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section h2 {
+  color: navy;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+#about h2, #about p:hover {
+  transform: scale(1.02);
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+/* Alternate background colors */
+section:nth-child(even):not(.hero) {
+  background: lightblue;
+}
+
+section:nth-child(odd):not(.hero) {
+  background: white;
+}
+
+/* Services list styling */
+section#services ul {
+  list-style-type: none;
+  display: inline-block;
+  text-align: left;
+  padding-left: 0;
+}
+
+section#services li {
+  margin: 15px 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+section#services li i {
+  margin-right: 10px;
+  color: darkblue;
+  transition: transform 0.3s ease;
+}
+
+section#services li:hover i {
+  transform: scale(1.3);
+  color: darkgreen;
+}
+
+section#services li:hover {
+  color: darkgreen;
+  transform: scale(1.05);
+}
+
+/* ==================== Footer ==================== */
+footer {
+  background: navy;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: lightgreen;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ==================== Back to Top Button ==================== */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border:
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: lightgreen;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* ==================== Animations ==================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 600px) {
+  .logo {
+    width: 80px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 40px 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  section#services li {
+    font-size: 1rem;
+  }
+}
