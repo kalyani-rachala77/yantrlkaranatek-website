@@ -247,15 +247,15 @@ footer a:hover {
 
 @media (max-width: 600px) {
   html, body {
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     background: #f9f9f9;
     padding: 0;
     margin: 0;
   }
   .navbar, header, .hero, section, footer {
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
   }
   .navbar {
